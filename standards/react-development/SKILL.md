@@ -485,7 +485,7 @@ A React task is complete when:
 - Components follow maintainable design principles.
 - State and data flow are understandable.
 - API interactions handle failures appropriately.
-- Accessibility requirements are considered.
+- Accessibility requirements agitre considered.
 - Security requirements are followed.
 - Relevant tests pass.
 - The production build succeeds where applicable.
