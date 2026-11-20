@@ -1,0 +1,263 @@
+# AI Agent Skills Library — Skill Catalog
+
+**Version:** 1.0  
+**Status:** Active  
+**Last Updated:** 2026-11-20
+
+## 1. Purpose
+
+The Skill Catalog is the central registry of reusable engineering skills maintained by the AI Agent Skills Library.
+
+It provides a structured overview of available skills, their responsibilities, activation conditions, dependencies, maturity and validation status.
+
+The catalog helps:
+
+- Developers discover appropriate skills.
+- AI agents identify relevant engineering guidance.
+- Skill authors avoid unnecessary duplication.
+- Maintainers track library development.
+- Platform integration projects identify skills that need adaptation.
+
+This catalog is a registry, not a replacement for individual SKILL.md instructions.
+
+## 2. Skill Classification
+
+Skills are organized into engineering domains.
+
+### 2.1 Frontend Engineering
+
+Focus: Building, reviewing, testing and maintaining user-facing applications.
+
+Planned skills:
+
+| Skill | Responsibility | Status |
+|---|---|---|
+| frontend-engineering | General frontend development practices | Planned |
+| ui-ux-design | User interface and experience design | Planned |
+| react-development | React application development | Planned |
+| frontend-security | Frontend security controls | Planned |
+| frontend-testing | Frontend testing and verification | Planned |
+| responsive-design | Responsive and adaptive interfaces | Planned |
+| frontend-performance | Frontend performance optimization | Planned |
+
+### 2.2 Backend Engineering
+
+Focus: Server-side application development and business logic.
+
+| Skill | Responsibility | Status |
+|---|---|---|
+| backend-engineering | General backend engineering | Planned |
+| spring-boot-development | Java Spring Boot applications | Planned |
+| nodejs-development | Node.js backend applications | Planned |
+| authentication-engineering | Authentication and identity management | Planned |
+| authorization-engineering | Access control and permissions | Planned |
+| background-processing | Background jobs and asynchronous processing | Planned |
+
+### 2.3 Database Engineering
+
+Focus: Data modeling, storage, integrity and performance.
+
+| Skill | Responsibility | Status |
+|---|---|---|
+| database-engineering | General database engineering | Planned |
+| database-design | Database modeling and schema design | Planned |
+| postgresql-development | PostgreSQL implementation | Planned |
+| database-optimization | Query and database performance | Planned |
+| database-migrations | Safe database schema changes | Planned |
+| database-security | Database access and protection | Planned |
+
+### 2.4 API Engineering
+
+Focus: Designing, implementing, integrating and maintaining APIs.
+
+| Skill | Responsibility | Status |
+|---|---|---|
+| api-engineering | General API development | Planned |
+| rest-api-design | REST API architecture | Planned |
+| api-integration | Connecting external services | Planned |
+| api-documentation | API documentation and contracts | Planned |
+| api-security | API security and protection | Planned |
+
+### 2.5 Security Engineering
+
+Focus: Identifying and reducing application and infrastructure security risks.
+
+| Skill | Responsibility | Status |
+|---|---|---|
+| secure-software-development | Secure development practices | Planned |
+| application-security | Application security assessment | Planned |
+| secrets-management | Credential and secret protection | Planned |
+| dependency-security | Third-party dependency security | Planned |
+| threat-modeling | Threat identification and analysis | Planned |
+| secure-authentication | Secure identity verification | Planned |
+
+### 2.6 Testing and Quality Engineering
+
+Focus: Verifying functionality, reliability and software quality.
+
+| Skill | Responsibility | Status |
+|---|---|---|
+| software-testing | General software testing | Planned |
+| unit-testing | Isolated component testing | Planned |
+| integration-testing | Component interaction testing | Planned |
+| end-to-end-testing | Complete workflow testing | Planned |
+| debugging | Error diagnosis and resolution | Planned |
+| code-review | Code quality and change review | Planned |
+| regression-testing | Detecting unintended behavior changes | Planned |
+
+### 2.7 DevOps and Infrastructure
+
+Focus: Building, deploying, operating and monitoring applications.
+
+| Skill | Responsibility | Status |
+|---|---|---|
+| devops-engineering | General DevOps practices | Planned |
+| ci-cd-engineering | Automated delivery pipelines | Planned |
+| docker-development | Containerization | Planned |
+| cloud-deployment | Cloud application deployment | Planned |
+| infrastructure-as-code | Infrastructure automation | Planned |
+| application-monitoring | Application health and monitoring | Planned |
+| logging-engineering | Structured logging and diagnostics | Planned |
+
+### 2.8 AI Engineering
+
+Focus: Developing AI-powered applications and agent-based systems.
+
+| Skill | Responsibility | Status |
+|---|---|---|
+| ai-engineering | General AI application development | Planned |
+| llm-integration | Integrating language models | Planned |
+| prompt-engineering | Structured prompt development | Planned |
+| ai-agent-development | Building autonomous and assisted agents | Planned |
+| mcp-development | Model Context Protocol server development | Planned |
+| rag-engineering | Retrieval-augmented generation | Planned |
+| ai-evaluation | Evaluating AI application behavior | Planned |
+| ai-security | AI application and agent security | Planned |
+
+## 3. Skill Metadata Requirements
+
+Every published skill SHOULD have a consistent identity and description.
+
+Recommended metadata:
+
+| Field | Purpose |
+|---|---|
+| name | Unique skill identifier |
+| description | What the skill does and when to use it |
+| category | Engineering domain |
+| version | Current skill version |
+| status | Development maturity |
+| dependencies | Related skills or standards |
+| compatibility | Tested platform integrations |
+
+The exact metadata format MUST follow the requirements of the target AI platform.
+
+## 4. Skill Maturity Levels
+
+The library uses the following maturity levels.
+
+### Planned
+The skill has been identified but its implementation has not been completed.
+
+### Draft
+An initial version exists but has not passed the required review.
+
+### Reviewed
+The instructions have been reviewed against the library standards.
+
+### Validated
+The skill has undergone practical testing or structured evaluation.
+
+### Stable
+The skill is maintained and considered ready for general use within its documented scope.
+
+A skill MUST NOT be marked Stable solely because its documentation has been written.
+
+## 5. Skill Dependency Rules
+
+Some skills depend on guidance from other skills.
+
+Examples:
+
+- React Development may depend on Frontend Engineering.
+- Frontend Security may reference Security Engineering.
+- Spring Boot Development may reference Backend Engineering and API Engineering.
+- MCP Development may reference AI Engineering and Security Engineering.
+- Cloud Deployment may reference DevOps Engineering and Security Engineering.
+
+Dependencies should be documented explicitly.
+
+A dependency means that another skill provides relevant guidance. It does not automatically mean the AI agent has loaded that skill.
+
+## 6. Skill Selection Guidelines
+
+When selecting skills, an AI agent SHOULD:
+
+1. Identify the user's requested task.
+2. Determine the engineering domain.
+3. Identify the specific technologies involved.
+4. Select the smallest relevant set of skills.
+5. Consider documented dependencies.
+6. Avoid loading unrelated instructions.
+7. Follow the applicable library standards.
+
+If multiple skills apply, the agent SHOULD combine their relevant guidance without duplicating work.
+
+## 7. Skill Naming Convention
+
+Skill names SHOULD:
+
+- Use lowercase letters.
+- Use hyphens between words.
+- Describe the skill's responsibility.
+- Avoid unnecessary abbreviations.
+- Remain unique within the library.
+
+Example:
+
+```text
+frontend-engineering
+api-security
+spring-boot-development
+mcp-development
+```
+
+Directory names and skill metadata SHOULD remain consistent.
+
+## 8. Validation and Publication
+
+Before a skill is published as Validated or Stable, maintainers SHOULD verify:
+
+- The skill follows the Skill Authoring Standard.
+- Relevant Security Standard requirements are included.
+- Relevant Quality and Verification Standard requirements are included.
+- The instructions are actionable.
+- The activation conditions are clear.
+- Examples and references are accurate.
+- Dependencies are documented.
+- Platform compatibility claims are supported by testing.
+
+## 9. Catalog Maintenance
+
+Maintainers SHOULD:
+
+- Update the catalog when skills are added.
+- Update maturity status when validation changes.
+- Remove obsolete entries.
+- Review duplicate skill responsibilities.
+- Document renamed or relocated skills.
+- Keep the catalog consistent with the repository structure.
+
+## 10. Current Library Development Status
+
+The catalog is initially a planning and tracking document.
+
+A skill's presence in this catalog does not prove that its implementation exists or has been validated.
+
+Maintainers MUST update status based on the actual state of the repository.
+
+## 11. Guiding Principle
+
+The Skill Catalog should make the library easy to understand, navigate, extend and maintain.
+
+Every skill should have a clear purpose, a defined responsibility and a documented place within the wider engineering system.
